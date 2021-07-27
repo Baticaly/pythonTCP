@@ -7,7 +7,7 @@ import time
 import os
 
 load_dotenv()
-HOST = os.environ.get("HOST")
+HOST = os.environ.get("HOST", "127.0.0.1")
 PORT = int(os.environ.get("PORT", 3000))
 
 socketInit = 0
