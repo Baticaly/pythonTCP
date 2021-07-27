@@ -13,11 +13,13 @@ PORT = int(os.environ.get("PORT", 3000))
 socketInit = 0
 controllerData =  '{}'
 
+# Failsafe parameters & functions
 def failsafe():
     # Failsafe parameters & orientation fix
     print("FAILSAFE")
     controllerData = '{}'
 
+# JSON parse & faulty package handling
 def packageHandle(data):
     try:
         data = json.loads(data)
@@ -61,7 +63,4 @@ while True:
         else:
             axis, buttons = packageHandle(controllerData)
 
-    print(axis)
-            
-            
-
+    #print(axis)
